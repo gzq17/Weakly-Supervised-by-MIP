@@ -48,30 +48,32 @@ root_path
 
 * **Pseudo labels Generation**.
     ```shell
-    python ...
+    python data_preprocess/mip_img2.py
+	python data_preprocess/mip_generate_pseudo_label.py
     ```
 
 ### Training
 * **Base Training**. 
     ```shell
-    python ...
+    python train_mip.py --drop True --one_fold 0  #--one_fold 1,2
+	python train_mip.py
     ```
 * **Pseudo label Refinement**. 
     ```shell
-    python ...
+    python utils/CL_UN.py
     ```
 
 * **Network Fine-tune**. 
     ```shell
-    python ...
+    python train_mip.py --rec_path 'reconstruction_label2_one_new_cl_un/' --fine-tune True
     ```
 
     
 ### Inference
 
-```shell
-python ...
-```
+	```shell
+	python inference.py
+	```
 
 ## Citation
 We hope you find our work useful. If you would like to acknowledge it in your project, please use the following citation:
