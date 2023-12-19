@@ -24,6 +24,24 @@ This repository contains the official implementation of our paper:
 * CUDA = 11.1
 * Install other packages in `requirements.txt`
 
+## Data preparation
+
+###mra_data
+The file structure is as follows:
+```shell
+root_path
+├── size_img
+├── size_label
+├── mip_img2
+├────── img_0.npy
+├────── img_0.png
+├────── img_0_label.png
+├── data_txt
+├────── train.txt
+├────── val.txt
+└────── test.txt
+```
+
 ## Run
 
 ### Data preprocess
