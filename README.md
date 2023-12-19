@@ -68,12 +68,11 @@ root_path
     python train_mip.py --rec_path 'reconstruction_label2_one_new_cl_un/' --fine-tune True
     ```
 
-    
 ### Inference
-
-	```shell
-	python inference.py
-	```
+* **Network inference**. 
+    ```shell
+    python inference.py
+    ```
 
 ## Citation
 We hope you find our work useful. If you would like to acknowledge it in your project, please use the following citation:
